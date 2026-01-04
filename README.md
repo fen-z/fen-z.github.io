@@ -11,20 +11,8 @@ A static web application for assessing supply chain maturity across five key dim
 - Personalized advice for improving to the next maturity level
 - PDF export functionality with results and recommendations
 - Responsive design for desktop and mobile devices
-- Legacy browser support
 
-## Prerequisites
-
-- Node.js 18.x or higher
-- npm (comes with Node.js)
-
-## Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/zwennaf/quickscan.git
-cd quickscan
-```
+Email under configuration
 
 2. Install dependencies:
 ```bash
