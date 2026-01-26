@@ -1,0 +1,5 @@
+127.0.0.1 - - [26/Jan/2026 11:43:52] "GET /projects/meldingzicht/interactive-map.html HTTP/1.1" 200 -
+127.0.0.1 - - [26/Jan/2026 11:43:52] "GET /projects/meldingzicht/vendor/leaflet.js HTTP/1.1" 200 -
+127.0.0.1 - - [26/Jan/2026 11:43:52] "GET /projects/meldingzicht/vendor/leaflet.css HTTP/1.1" 200 -
+127.0.0.1 - - [26/Jan/2026 11:43:52] "GET /projects/meldingzicht/vendor/images/marker-icon.png HTTP/1.1" 200 -
+127.0.0.1 - - [26/Jan/2026 11:43:52] "GET /projects/meldingzicht/vendor/images/marker-shadow.png HTTP/1.1" 200 -
