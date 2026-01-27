@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Map</title>
-    <!-- ⚡ Bolt: Added preconnect and dns-prefetch for unpkg.com to speed up resource loading -->
-    <link rel="preconnect" href="https://unpkg.com">
-    <link rel="dns-prefetch" href="https://unpkg.com">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- ⚡ Bolt: Vendored Leaflet.js assets locally to improve load times and reliability by reducing network requests. -->
+    <link rel="stylesheet" href="vendor/leaflet.css" />
     <style>
         #map {
             height: 600px;
@@ -16,7 +14,7 @@
 </head>
 <body>
     <div id="map"></div>
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="vendor/leaflet.js"></script>
     <script>
         // Initialize the map
         var map = L.map('map').setView([51.505, -0.09], 2);
