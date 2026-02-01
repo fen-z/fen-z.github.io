@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Map</title>
-    <!-- ⚡ Bolt: Added preconnect and dns-prefetch for unpkg.com to speed up resource loading -->
-    <link rel="preconnect" href="https://unpkg.com">
-    <link rel="dns-prefetch" href="https://unpkg.com">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- ⚡ Bolt: Added preconnect for tile server and vendored Leaflet for better performance -->
+    <link rel="preconnect" href="https://tile.openstreetmap.org">
+    <link rel="dns-prefetch" href="https://tile.openstreetmap.org">
+    <link rel="stylesheet" href="vendor/leaflet.css" />
     <style>
         #map {
             height: 600px;
@@ -16,13 +16,13 @@
 </head>
 <body>
     <div id="map"></div>
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="vendor/leaflet.js"></script>
     <script>
         // Initialize the map
         var map = L.map('map').setView([51.505, -0.09], 2);
 
-        // Add OpenStreetMap tiles
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        // Add OpenStreetMap tiles (using naked domain for better HTTP/2 performance)
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '© OpenStreetMap'
         }).addTo(map);
