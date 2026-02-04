@@ -7,6 +7,8 @@
     <!-- ⚡ Bolt: Added preconnect and dns-prefetch for unpkg.com to speed up resource loading -->
     <link rel="preconnect" href="https://unpkg.com">
     <link rel="dns-prefetch" href="https://unpkg.com">
+    <!-- ⚡ Bolt: Added preconnect for tile.openstreetmap.org to speed up tile loading -->
+    <link rel="preconnect" href="https://tile.openstreetmap.org">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <style>
         #map {
@@ -22,7 +24,9 @@
         var map = L.map('map').setView([51.505, -0.09], 2);
 
         // Add OpenStreetMap tiles
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        // ⚡ Bolt: Using naked domain https://tile.openstreetmap.org instead of {s}.tile...
+        // to better utilize HTTP/2 multiplexing and reduce handshake overhead.
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '© OpenStreetMap'
         }).addTo(map);
