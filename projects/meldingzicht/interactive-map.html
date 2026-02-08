@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Map</title>
-    <!-- ⚡ Bolt: Added preconnect for tile.openstreetmap.org to speed up tile loading -->
+    <!-- ⚡ Bolt: Added preconnect and dns-prefetch for tile.openstreetmap.org to speed up tile loading -->
     <link rel="preconnect" href="https://tile.openstreetmap.org">
+    <link rel="dns-prefetch" href="https://tile.openstreetmap.org">
     <!-- ⚡ Bolt: Vendored Leaflet to reduce DNS lookups, TLS handshakes, and improve connection reuse -->
     <link rel="stylesheet" href="vendor/leaflet.css" />
     <style>
